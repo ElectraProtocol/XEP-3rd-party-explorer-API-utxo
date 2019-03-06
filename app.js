@@ -57,6 +57,24 @@ app.use('/ext/getmoneysupply', function(req,res){
   });
 });
 
+app.use('/ext/txinfo/:hash', function(req,res){
+  db.get_tx(req.param('hash'), function(tx){
+    if (tx) {
+      var a_ext = {
+        hash: tx.txid,
+        block: tx.blockindex,
+        timestamp: tx.timestamp,
+        total: tx.total,
+        inputs: tx.vin,
+        outputs: tx.vout,
+      };
+      res.send(a_ext);
+    } else {
+      res.send({ error: 'tx not found.', hash: req.param('hash')})
+    }
+  });
+});
+
 app.use('/ext/getaddress/:hash', function(req,res){
   db.get_address(req.param('hash'), function(address){
     if (address) {
