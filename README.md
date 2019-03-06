@@ -6,6 +6,7 @@ https://github.com/iquidus/explorer
 
 ### Introduction
 
+
 MIP Patch adds a /ext/getutxos route in the explorer API
 
 This is achieved by maintaining a straightforward list of unspent outputs in the Adresses collection items.

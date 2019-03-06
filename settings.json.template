@@ -66,6 +66,7 @@
     "twitter": true,
     "facebook": true,
     "googleplus": false,
+    "youtube": false,
     "search": true,
     "movement": true,
     "network": true
@@ -117,7 +118,9 @@
   // twitter, facebook, googleplus
   "twitter": "ElectracoinECA",
   "facebook": "Electracoineca",
+
   "googleplus": "yourgooglepluspage",
+  "youtube": "youryoutubechannel",
 
   //genesis
   "genesis_tx": "a45c61b17857983dee346573eb46cae28171b98a2595115fea8bc5a9227467dd",
