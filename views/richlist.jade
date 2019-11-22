@@ -8,7 +8,7 @@ block content
       ];
       var pieWealthDist = $.jqplot('pieChart', [data],
         {
-          seriesColors: [ "#d9534f", "#5cb85c", "#428bca", "#222", "#CCC"],
+          seriesColors: [ "#b19ac3", "#a84fd3", "#a618d7", "#700096", "#491f90"],
           series: [{
             // Make this a pie chart.
             renderer: $.jqplot.PieRenderer,
@@ -62,28 +62,33 @@ block content
           tbody
             tr
               th
-                div.pull-left(style='background-color:#d9534f;width:20px;height:20px;margin-right:6px;')
+                div.pull-left(style='background-color:#b19ac3;width:20px;height:20px;margin-right:6px;')
                 span #{settings.locale.rl_top25}
               td #{parseFloat(dista.total).toFixed(8)}
               td.text-center #{parseFloat(dista.percent).toFixed(2)}
             tr
               th
-                div.pull-left(style='background-color:#5cb85c;width:20px;height:20px;margin-right:6px;')
+                div.pull-left(style='background-color:#a84fd3;width:20px;height:20px;margin-right:6px;')
                 span #{settings.locale.rl_top50}
               td #{parseFloat(distb.total).toFixed(8)}
               td.text-center #{parseFloat(distb.percent).toFixed(2)}
             tr
               th
-                div.pull-left(style='background-color:#428bca;width:20px;height:20px;margin-right:6px;')
+                div.pull-left(style='background-color:#a618d7;width:20px;height:20px;margin-right:6px;')
                 span #{settings.locale.rl_top75}
               td #{parseFloat(distc.total).toFixed(8)}
               td.text-center #{parseFloat(distc.percent).toFixed(2)}
             tr
               th
-                div.pull-left(style='background-color:#222;width:20px;height:20px;margin-right:6px;')
+                div.pull-left(style='background-color:#700096;width:20px;height:20px;margin-right:6px;')
                 span #{settings.locale.rl_top100}
               td #{parseFloat(distd.total).toFixed(8)}
               td.text-center #{parseFloat(distd.percent).toFixed(2)}
+            tr
+              th
+                div.pull-left(style='background-color:#491f90;width:20px;height:20px;margin-right:6px;')
+                span #{settings.locale.rl_hundredplus}
+              td #{parseFloat(diste.total).toFixed(8)}                                                                                td.text-center #{parseFloat(diste.percent).toFixed(2)}
             tr
               th
                 span #{settings.locale.total}
